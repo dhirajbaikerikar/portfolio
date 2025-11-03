@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dhiraj Baikerikar — Senior Business Analyst & Consultant</title>
+  <meta name="description" content="Portfolio of Dhiraj Baikerikar — Business Analyst, Consultant, CRM & Digital Transformation specialist.">
+  <meta name="author" content="Dhiraj Baikerikar">
+
+  <style>
+    :root{
+      --bg: #f7f8fb; --card:#ffffff; --muted:#5b6570; --accent:#0ea5a4;
+      --radius:14px; --shadow: 0 8px 24px rgba(15,23,42,0.06);
+    }
+    [data-theme="dark"]{
+      --bg:#071022; --card:#0e1724; --muted:#98a6bf; --accent:#22d3ee; --shadow: 0 10px 28px rgba(2,6,23,0.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,var(--bg),transparent);color: #0b1a26;
+      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    a{color:inherit}
+    /* Header */
+    header{position:sticky;top:0;background:transparent;padding:14px 18px;backdrop-filter: blur(6px);z-index:60}
+    .navwrap{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#60a5fa);
+      display:grid;place-items:center;color:white;font-weight:700;font-size:18px;box-shadow:var(--shadow)
+    }
+    nav{display:flex;gap:10px;align-items:center}
+    nav a{color:var(--muted);padding:8px 12px;border-radius:10px;font-weight:600;text-decoration:none}
+    .controls{display:flex;gap:8px;align-items:center}
+    button.icon{border:0;background:transparent;cursor:pointer;padding:8px;border-radius:8px}
+    .btn{background:var(--accent);color:#042;padding:10px 14px;border-radius:10px;font-weight:700;border:0;cursor:pointer}
+
+    /* Page */
+    .page{max-width:1100px;margin:24px auto;padding:20px;display:grid;gap:20px}
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center}
+    .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .intro h1{margin:0;font-size:26px}
+    .lead{color:var(--muted);margin-top:8px}
+
+    /* Projects grid */
+    .filters{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .chip{padding:8px 12px;border-radius:999px;background:transparent;border:1px solid rgba(0,0,0,0.06);cursor:pointer;font-weight:700;color:var(--muted)}
+    .chip.active{background:linear-gradient(90deg,var(--accent),#7c3aed);color:white;border:0}
+    .projects {  display: grid;  grid-template-columns: repeat(3, 1fr); gap: 14px;  margin-top: 14px;} /* exactly 3 columns */
+    .project-title{margin:0;font-size:16px}
+    .project-desc{color:var(--muted);font-size:14px;margin-top:8px}
+
+    /* Skills */
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .skill{display:flex;flex-direction:column;gap:8px}
+    .bar{height:10px;background:rgba(0,0,0,0.06);border-radius:999px;overflow:hidden}
+    .bar > i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),#7c3aed);transform-origin:left;width:0;transition:width 900ms cubic-bezier(.2,.9,.2,1)}
+
+    /* Timeline */
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .titem{display:flex;gap:12px;align-items:flex-start}
+    .tmarker{width:12px;height:12px;border-radius:50%;background:var(--accent);margin-top:6px}
+    .tcard{background:transparent;padding:0}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .contact-grid input,.contact-grid textarea{padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:transparent;width:100%}
+    .contact-grid textarea{min-height:120px;resize:vertical}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* Footer */
+    footer{margin-top:18px;padding:18px;text-align:center;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr 1fr}.contact-grid{grid-template-columns:1fr}}
+    @media (max-width:520px){nav{display:none}.skills-grid{grid-template-columns:1fr}.projects{grid-template-columns:1fr}.intro h1{font-size:20px}}
+
+    /* small animations */
+    .fade-in{opacity:0;transform:translateY(6px);animation:fadeIn 520ms forwards}
+    @keyframes fadeIn{to{opacity:1;transform:none}}
+
+    /* focus outlines */
+    a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(14,165,164,0.12);outline-offset:2px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navwrap" role="banner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">DB</div>
+        <div>
+          <div style="font-weight:800">Dhiraj Baikerikar</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:3px">Senior Business Analyst • Digital Transformation</div>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="controls">
+        <a class="btn" href="Dhiraj_Baikerikar_Resume.pdf" id="downloadResume" download aria-label="Download resume">Download Resume</a>
+        <button id="themeToggle" class="icon" aria-pressed="false" title="Toggle dark / light mode">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page" id="top">
+    <section class="card intro fade-in" aria-labelledby="intro-heading">
+      <!--<article class="card intro fade-in" aria-labelledby="intro-heading">-->
+        <h1 id="intro-heading">Hi — I'm Dhiraj, Senior Business Analyst & Consultant</h1>
+        <p class="lead">With a strong foundation in Business Analysis, Project Management, and Consulting, I have helped organizations across manufacturing, FMCG, finance, and IT industries evolve through technology and data-driven strategies.</p>
+		<p class="lead">From designing CRM systems to leading enterprise UATs and digital transformations, I bring both technical depth and business vision to every engagement — ensuring that every solution is practical, scalable, and aligned with business goals.</p>
+
+        <div style="display:flex;gap:20px;margin-top:20px;flex-wrap:wrap">
+         <!-- <a class="btn" href="#contact">Hire / Contact</a> -->
+          <a class="chip" href="#projects" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">See Projects</a>
+        </div>
+
+        <div style="display:flex;gap:18px;margin-top:16px;flex-wrap:wrap">
+          <div style="min-width:140px">
+            <div class="small">Location</div>
+            <div style="font-weight:700">Pune, Maharashtra, India</div>
+          </div>
+          <div style="min-width:140px">
+            <div class="small">Email</div>
+            <div style="font-weight:700"><a href="mailto:dhiraj.baikerikar@gmail.com">dhiraj.baikerikar@gmail.com</a></div>
+          </div>
+          <div style="min-width:140px">
+            <div class="small">Phone</div>
+            <div style="font-weight:700"><a href="tel:+919699794948">+91 96997 94948</a></div>
+          </div>
+        </div>
+		<div style="min-width:140px">
+            <div class="small">LinkedIn:</div>
+            <div style="font-weight:700"><a href="https://www.linkedin.com/in/dhirajbaikerikar-22"target="_blank" rel="noopener">/in/dhirajbaikerikar-22</a></div>
+          </div>
+        </div>
+        
+      
+
+      
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card fade-in" aria-labelledby="about-heading">
+	
+      <h2 id="about-heading">About Me</h2>
+      <p style="color:var(--muted)">I’m a passionate Senior Business Analyst & IT Consultant with over 8 years of experience transforming business challenges into digital success stories. My expertise lies in bridging the gap between strategy and execution — helping organizations redefine workflows, implement CRMs, and optimize processes to achieve measurable results.</p>
+		<p style="color:var(--muted)">I specialize in Digital Transformation, CRM Implementations (Zoho & Salesforce), and Process Optimization, combining analytical precision with a deep understanding of user experience and business value. I enjoy turning complex business requirements into clear, actionable plans that drive growth and efficiency.</p>
+		<p style="color:var(--muted)">My approach is simple: understand the business, design the right solution, and deliver it with clarity and collaboration.</p>
+
+      <h3 style="margin-top:14px">Core Competencies</h3>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+        <span class="chip" style="background:transparent;border:1px solid rgba(0,0,0,0.06)">Business Analysis</span>
+        <span class="chip" style="background:transparent;border:1px solid rgba(0,0,0,0.06)">UAT Strategy</span>
+        <span class="chip" style="background:transparent;border:1px solid rgba(0,0,0,0.06)">CRM Implementation</span>
+        <span class="chip" style="background:transparent;border:1px solid rgba(0,0,0,0.06)">Process Optimization</span>
+        <span class="chip" style="background:transparent;border:1px solid rgba(0,0,0,0.06)">Power BI </span>
+		 <span class="chip" style="background:transparent;border:1px solid rgba(0,0,0,0.06)">Agile-Scrum</span>
+        <span class="chip" style="background:transparent;border:1px solid rgba(0,0,0,0.06)">Stakeholder Management</span>
+        <span class="chip" style="background:transparent;border:1px solid rgba(0,0,0,0.06)">BRD/FSD Documentation</span>
+        <span class="chip" style="background:transparent;border:1px solid rgba(0,0,0,0.06)">Figma Prototyping</span>
+        <span class="chip" style="background:transparent;border:1px solid rgba(0,0,0,0.06)">SQL & API Testing</span>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+<section id="projects" class="fade-in" aria-labelledby="projects-heading">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+    <div>
+      <h2 id="projects-heading">Selected Projects</h2>
+      <p style="color:var(--muted);margin-top:6px">
+        Filter by domain — click a chip to filter projects.
+      </p>
+    </div>
+
+    <div class="filters" id="projectFilters">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="manufacturing">Manufacturing</button>
+      <button class="chip" data-filter="bfsi">BFSI</button>
+      <button class="chip" data-filter="oilgas">Oil & Gas</button>
+      <button class="chip" data-filter="aviation">Aviation</button>
+      <button class="chip" data-filter="gaming">Gaming</button>
+    </div>
+  </div>
+
+  <style>
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .project {
+      position: relative;
+      background: var(--card-bg, #fff);
+      border: 1px solid #e1e1e1;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .project.collapsed .extra {
+      display: none;
+    }
+
+    .project h3 {
+      margin: 0;
+      font-size: 1.05rem;
+      color: var(--text, #222);
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: var(--muted, #555);
+      margin: 4px 0 10px 0;
+    }
+
+    .hide-btn {
+      background: var(--accent, #007b83);
+      border: none;
+      color: #fff;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .hide-btn:hover {
+      background: #089a98;
+    }
+
+    @media (max-width: 600px) {
+      .project { padding: 14px; }
+      .project h3 { font-size: 1rem; }
+    }
+  </style>
+
+  <div class="projects" id="projectsGrid" role="list">
+
+    <!-- Project 1 -->
+    <article class="card project collapsed" data-tags="manufacturing">
+      <h3>Wohr Parking Systems Pvt. Ltd., Pune — CRM Migration & Implementation</h3>
+      <div class="meta">Mar 2025 – Jul 2025 • Manufacturing • On-site</div>
+      <div class="extra">
+        <p><strong>Role:</strong> Senior Business Analyst</p>
+        <ul>
+          <li>Led the transition from Salesforce to Zoho, achieving 30% faster lead conversion and cost savings.</li>
+          <li>Designed CRM and Zoho Creator architecture integrating Lead-to-Contract workflow, SAP Cloud, and analytics dashboards.</li>
+          <li>Authored FSDs, coordinated UAT, and delivered user training for sales, project, and service teams.</li>
+          <li>Developed service portal via Zoho Creator to streamline service task tracking.</li>
+		</ul>
+      </div>
+      <button class="hide-btn">Show Details</button>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="card project collapsed" data-tags="bfsi">
+      <h3>Jio BlackRock — Zoho CRM Implementation</h3>
+      <div class="meta">May 2025 – Jul 2025 • BFSI</div>
+      <div class="extra">
+        <p><strong>Role:</strong> Lead Consultant</p>
+        <ul>
+          <li>Spearheaded the design of Zoho CRM Plus for unified customer data and workflow automation for Sales and SRM teams.</li>
+          <li>Defined role-based access models ensuring compliance with SEBI and regulatory requirements.</li>
+          <li>Designed integrations with mobile apps, IVR, Chatbot, SEBI feeds, and Zoho Desk for multi-channel ticket handling.</li>
+          <li>Delivered real-time dashboards providing 360° customer visibility and improved operational transparency.</li>
+		</ul>
+      </div>
+      <button class="hide-btn">Show Details</button>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="card project collapsed" data-tags="manufacturing">
+      <h3>L’Oréal India Pvt. Ltd., Mumbai — PMO / UAT Lead</h3>
+      <div class="meta">Engagement 1: Sep 2022 – Oct 2023 & Engagement 2: Mar 2024 – Jan 2025</div>
+      <div class="extra">
+        <p><strong>Role:</strong> Consultant / PMO & UAT Lead</p>
+        <ul>
+          <li>Consolidated dual departmental DMS into Salesforce CRM, reducing manual processes by 30%.</li>
+          <li>Oversaw governance, dashboards, RACI, UAT cycles, and post-go-live performance tracking.</li>
+          <li>Integrated Salesforce with SAP Cloud ERP for distributor management and escalations.</li>
+          <li>Delivered real-time performance insights via custom dashboards for sales and service.</li>
+          <li>Led migration from 11-digit to 8-digit product codes impacting 22 downstream applications.</li>
+          <li>Coordinated with 10+ vendors and standardized product descriptions to improve reporting accuracy.</li>
+		</ul>
+      </div>
+      <button class="hide-btn">Show Details</button>
+    </article>
+
+    <!-- Project 4 -->
+    <article class="card project collapsed" data-tags="oilgas">
+      <h3>ONGC — Command Control Centre (UI/UX)</h3>
+      <div class="meta">Jan 2024 – Jun 2024 • Oil & Gas • PAN India</div>
+      <div class="extra">
+        <p><strong>Role:</strong> UI/UX Business Analyst</p>
+        <ul>
+        <li>Designed a real-time CCC dashboard for nationwide oil well monitoring.</li>
+         <li>Created pixel-perfect Figma prototypes, chatbot UX, and sensor-alarm workflows.</li>
+         <li>Improved operator response times and decision-making via live alerts and centralized visualization.</li>
+		</ul>
+      </div>
+      <button class="hide-btn">Show Details</button>
+    </article>
+
+    <!-- Project 5 -->
+    <article class="card project collapsed" data-tags="aviation">
+      <h3>BIAL (Bangalore International Airport Ltd) — Ticketing System & Helpdesk Dashboard</h3>
+      <div class="meta">Aug 2024 – Feb 2025 • Aviation • PAN India</div>
+      <div class="extra">
+        <p><strong>Role:</strong> UI/UX Business Analyst</p>
+        <ul>
+          <li>Collaborated with cross-functional airport operations teams to understand user requirements, workflows, and touchpoints.</li>
+          <li>Designed end-to-end Figma UI/UX prototypes for ticketing, helpdesk, and dashboards aligned to business goals.</li>
+          <li>Conducted feedback sessions with operational teams to refine layouts, improve usability, and ensure intuitive navigation.</li>
+          <li>Defined information hierarchy, accessibility guidelines, and color semantics to reduce operator fatigue.</li>
+          <li>Partnered with developers to ensure functional feasibility and consistency across UI modules.</li>
+		</ul>
+      </div>
+      <button class="hide-btn">Show Details</button>
+    </article>
+
+    <!-- Project 6 -->
+    <article class="card project collapsed" data-tags="manufacturing">
+      <h3>Kirloskar Brothers Ltd — D2C + B2B eCommerce</h3>
+      <div class="meta">Jun 2024 – Mar 2025 • Manufacturing • On-site</div>
+      <div class="extra">
+        <p><strong>Role:</strong> Business Analyst</p>
+        <ul>
+          <li>Designed Magento-based D2C + B2B platform to shift major sales online and improve margins.</li>
+          <li>Delivered end-to-end BRD/FRD, UI/UX prototypes, and risk registers.</li>
+          <li>Managed change requests and ensured consistent desktop–mobile UX.</li>
+          <li>Enabled real-time order and service tracking with automated workflows.</li>
+		</ul>
+      </div>
+      <button class="hide-btn">Show Details</button>
+    </article>
+
+    <!-- Project 7 -->
+    <article class="card project collapsed" data-tags="gaming">
+      <h3>Mercury International — System Customization & Process Optimization</h3>
+      <div class="meta">Oct 2019 – Mar 2021 • Gaming • On-site</div>
+      <div class="extra">
+        <p><strong>Role:</strong> Project Coordinator & Management</p>
+        <ul>
+          <li>Successfully led end-to-end project management and delivered customized web & terminal applications.</li>
+          <li>Facilitated integration meetings with banks and telecom operators for successful system integration.</li>
+          <li>Delivered training and technical documentation; improved operational reliability and user adoption.</li>
+          <li>Developed service portal via Zoho Creator to streamline service task tracking.</li>
+        </ul>
+      </div>
+      <button class="hide-btn">Show Details</button>
+    </article>
+
+    <!-- Project 8 -->
+    <article class="card project collapsed" data-tags="gaming">
+      <h3>Game-Tec Labs Inc. — QA & Functional Testing</h3>
+      <div class="meta">Jan 2018 – Mar 2020 • Gaming</div>
+      <div class="extra">
+        <p><strong>Role:</strong> Software Tester</p>
+        <ul>
+          <li>Prepared comprehensive test scenarios and test cases for web & mobile gaming modules.</li>
+          <li>Reported and tracked bugs through JIRA, ensuring timely resolution and quality delivery.</li>
+          <li>Utilized DDL, DQL, DML queries to fetch test data and validate results in test environments.</li>
+        </ul>
+      </div>
+      <button class="hide-btn">Show Details</button>
+    </article>
+
+    <!-- Project 9 -->
+    <article class="card project collapsed" data-tags="gaming">
+      <h3>Obiri Lotto (Ghana) — JBoss Migration Lead</h3>
+      <div class="meta">Jan 2021 – May 2022 • Gaming</div>
+      <div class="extra">
+        <p><strong>Role:</strong> Business Analyst</p>
+        <ul>
+          <li>Upgraded backend from JBoss 5 to JBoss 14 (WildFly) with zero downtime.</li>
+          <li>Designed responsive admin portal UX and integrated Android lottery devices.</li>
+          <li>Executed structured migration plan securing sensitive data and improving system performance.</li>
+        </ul>
+      </div>
+      <button class="hide-btn">Show Details</button>
+    </article>
+
+  </div>
+
+  <script>
+    // Toggle expand/collapse
+    document.querySelectorAll('.hide-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const project = btn.closest('.project');
+        project.classList.toggle('collapsed');
+        btn.textContent = project.classList.contains('collapsed') ? 'Show Details' : 'Hide Details';
+      });
+    });
+
+    // Filter functionality
+    const filters = document.querySelectorAll('#projectFilters .chip');
+    const projects = document.querySelectorAll('.project');
+
+    filters.forEach(filter => {
+      filter.addEventListener('click', () => {
+        filters.forEach(f => f.classList.remove('active'));
+        filter.classList.add('active');
+        const category = filter.dataset.filter;
+        projects.forEach(project => {
+          const match = category === 'all' || project.dataset.tags.includes(category);
+          project.style.display = match ? 'block' : 'none';	
+        });
+      });
+    });
+  </script>
+</section>
+
+
+    <!-- SKILLS -->
+    <section id="skills" class="card fade-in" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills & Tools</h2>
+      <div class="skills-grid" style="margin-top:12px">
+        <div>
+          <div class="skill"><div style="display:flex;justify-content:space-between"><strong>Business Analysis</strong><small>95%</small></div>
+            <div class="bar"><i data-width="95%"></i></div></div>
+
+          <div class="skill" style="margin-top:8px"><div style="display:flex;justify-content:space-between"><strong>UAT & QA</strong><small>92%</small></div>
+            <div class="bar"><i data-width="92%"></i></div></div>
+
+          <div class="skill" style="margin-top:8px"><div style="display:flex;justify-content:space-between"><strong>CRM (Zoho / Salesforce)</strong><small>90%</small></div>
+            <div class="bar"><i data-width="90%"></i></div></div>
+        </div>
+
+        <div>
+          <div class="skill"><div style="display:flex;justify-content:space-between"><strong>Power BI / Tableau</strong><small>88%</small></div>
+            <div class="bar"><i data-width="88%"></i></div></div>
+
+          <div class="skill" style="margin-top:8px"><div style="display:flex;justify-content:space-between"><strong>SQL & APIs</strong><small>85%</small></div>
+            <div class="bar"><i data-width="85%"></i></div></div>
+
+          <div class="skill" style="margin-top:8px"><div style="display:flex;justify-content:space-between"><strong>Figma & Prototyping</strong><small>84%</small></div>
+            <div class="bar"><i data-width="84%"></i></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="fade-in" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+      <div class="timeline" style="margin-top:12px">
+        <div class="titem">
+          <div class="tmarker" aria-hidden="true"></div>
+          <div class="tcard card">
+            <strong>Senior Business Analyst — Fristine Infotech</strong>
+            <div class="small">Mar 2025 – Present | Pune</div>
+			 <ul>
+			<li>Conducted Requirements Elicitation and Gap Analysis for Salesforce-to-Zoho CRM migration at Wohr Parking Systems, improving lead conversion by 30%.</li>
+			<li>Performed AS-IS/TO-BE Process Mapping and developed User Stories and Acceptance Criteria for 5 CRM modules integrated with SAP Cloud.</li>
+			<li>Built a custom service portal via Zoho Creator, reducing ticket response time by 40%, managing 15+ Change Requests during UAT cycles.</li>
+			<li>Delivered Cost-Benefit Analysis for Zoho CRM and Zoho Desk for Jio BlackRock, automation and implemented dashboards improving transparency by 35%.</li>
+			<li>Facilitated PAN India training and post-go-live support with a 95% user adoption rate.</p>
+			</ul>
+		    </div>
+        </div>
+
+        <div class="titem">
+          <div class="tmarker" aria-hidden="true"></div>
+          <div class="tcard card">
+            <strong>Consultant — KPMG India</strong>
+            <div class="small">May 2022 – Mar 2025 | Mumbai</div>
+            <ul>
+			<li> Managed Requirements Gathering, Project Charters, Dashboard Reports, Feasibility Studies, and UAT execution for 47 enterprise applications at L’Oréal India, achieving 95% defect detection.</li>
+			<li> Conducted Risk Assessment and Impact Analysis for CRM integrations and migrations, ensuring system reliability and governance.</li>
+			<li> Designed Business Process Models and Requirements Traceability Matrices (RTM) for Agile delivery at Kirloskar Brothers Ltd, improving efficiency by 25%.</li>
+			<li> Developed Figma<li>based UI/UX prototypes for ONGC and Nayara Energy’s Command Control Centre, improving operator response by 45%.</li>
+			<li> Designed Figma<li>based UI/UX prototypes for BIAL ticketing system, improving operator response and passenger processing efficiency.</li>
+			<li> Created digital transformation proposals and roadmaps for BIAL, TATA Steel, and TATA Coal, supporting modernization initiatives.</li>
+			<li> Supported Metaverse testing with Meta Quest 2.</li>0 to enhance virtual collaboration within KPMG’s innovation lab.</li>
+			</ul>
+		  </div>
+        </div>
+
+        <div class="titem">
+          <div class="tmarker" aria-hidden="true"></div>
+          <div class="tcard card">
+            <strong>Technical Operations Associate — Dusane Infotech</strong>
+            <div class="small">Aug 2017 – May 2022 | Mumbai</div>
+            <ul>
+			<li> Led JBoss migration from JBoss 5 to JBoss 14 (WildFly) for Obiri Lotto, performing Risk Assessment and Change Management to ensure zero downtime and 35% performance gain and integrating 200+ Android terminals.</li>
+			<li> Executed API testing, SQL validation, and Data Modeling for system upgrades, ensuring compliance and scalability.</li>
+			<li> Implemented customized web and terminal applications for Mercury International, enhancing uptime to 99.</li>5% and satisfaction by 40%.</li>
+			<li> Developed UAT test scenarios, Acceptance Criteria, and coordinated cross<li>functional teams, reducing defects by 25%.</li>
+			<li> Created BRDs, FSDs, and Process Flow Diagrams aligned with business objectives and traceable through full project lifecycle.</li>
+			<li> Conducted API testing (POSTMAN) and SQL<li>based functional validation for Game-Tec Labs Inc., ensuring product stability and compliance.</li>
+			<li> Streamlined Agile sprint management through JIRA, improving productivity by 30%, and reduced support queries by 25% via training and process documentation.</li>
+			<li> Delivered end-to-end SDLC projects involving Requirement Analysis, Functional Solution Design, and Process Optimization for global clients.</li>
+			</ul>
+			</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS + BLOG (stubs) -->
+    <!--<section style="display:grid;grid-template-columns:1fr 1fr;gap:14px">-->
+	<section id="contact" class="card fade-in" aria-labelledby="contact-heading">
+      <div class="card">
+        <h2>Testimonials</h2>
+        <p class="small">"Dhiraj led our CRM migration with excellent stakeholder management and measurable results." — Client</p>
+        <p class="small">"UAT leadership and governance during our rollout was exceptional." — Project Sponsor</p>
+      </div>
+	</section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="card fade-in" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+            <div style="margin-top:12px;color:var(--muted)">
+        <div><strong>Email:</strong> <a href="mailto:dhiraj.baikerikar@gmail.com">dhiraj.baikerikar@gmail.com</a></div>
+        <div><strong>Phone:</strong> <a href="tel:+919699794948">+91 96997 94948</a></div>
+        <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dhirajbaikerikar-22" target="_blank" rel="noopener">/in/dhirajbaikerikar-22</a></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">© <span id="year"></span> Dhiraj Baikerikar — Built with care • Minimal / Modern Portfolio</div>
+    </footer>
+  </main>
+
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle (persist)
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme','dark');
+      themeToggle.textContent = '☀️';
+      themeToggle.setAttribute('aria-pressed','true');
+    } else {
+      themeToggle.textContent = '🌙';
+      themeToggle.setAttribute('aria-pressed','false');
+    }
+    themeToggle.addEventListener('click', () => {
+      const now = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      if (now === 'dark') {
+        document.documentElement.setAttribute('data-theme','dark');
+        themeToggle.textContent = '☀️';
+        themeToggle.setAttribute('aria-pressed','true');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        themeToggle.textContent = '🌙';
+        themeToggle.setAttribute('aria-pressed','false');
+      }
+      localStorage.setItem('theme', now);
+    });
+
+    // Project filters
+    document.querySelectorAll('#projectFilters .chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('#projectFilters .chip').forEach(c => { c.classList.remove('active'); c.setAttribute('aria-pressed','false'); });
+        chip.classList.add('active'); chip.setAttribute('aria-pressed','true');
+        const f = chip.dataset.filter;
+        document.querySelectorAll('#projectsGrid .project').forEach(p => {
+          if (f === 'all') { p.style.display = 'block'; }
+          else {
+            const tags = (p.dataset.tags || '').split(' ');
+            p.style.display = tags.includes(f) ? 'block' : 'none';
+          }
+        });
+      });
+    });
+
+    // Animate skill bars on load
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.bar > i').forEach(i => {
+        const w = i.dataset.width || '60%';
+        setTimeout(() => i.style.width = w, 80);
+      });
+      // small fade-in
+      document.querySelectorAll('.fade-in').forEach((el, idx) => el.style.animationDelay = (idx*60)+'ms');
+    });
+
+    // Contact handler (mailto fallback + in-page UX)
+    function handleContact(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const status = document.getElementById('contactStatus');
+
+      // Basic validation (HTML required attributes also in place)
+      if (!name || !email || !subject || !message) {
+        status.textContent = 'Please fill all required fields.';
+        status.style.color = '#b91c1c';
+        return false;
+      }
+
+      // Build mailto fallback
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\n${message}`);
+      const mailto = `mailto:dhiraj.baikerikar@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+      // Try to open mail client
+      window.location.href = mailto;
+
+      // Show friendly message (in case mail client opens)
+      status.textContent = 'Your email client should open. If not, please email directly to dhiraj.baikerikar@gmail.com';
+      status.style.color = 'green';
+
+      // Clear form (non-blocking)
+      setTimeout(() => { document.getElementById('contactForm').reset(); }, 700);
+      return false;
+    }
+
+    // NOTE: To support server-side submissions:
+    // Replace handleContact logic with a POST to your endpoint (Formspree/Netlify/AWS Lambda) and update the UX accordingly.
+  </script>
+</body>
+</html>
